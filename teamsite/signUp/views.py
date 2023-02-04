@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 
 def signup(request):
-    return HttpResponse("<h1>Сторінка реєстарції</h1>")
+    return render(request, 'signUp/sign_up.html')
 
 
 def login(request):
