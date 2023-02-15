@@ -15,7 +15,6 @@ body {
   font-family: raleway;
 }
 
-
 .container
 {
  
@@ -42,17 +41,10 @@ body {
 
 }
 
-.welkome
-{
-  margin-top: 10px;
-  font-weight: 900;
-  font-size: 1.8rem;
-  color: #171717;
-  letter-spacing: 1px;
-}
+
 .details
 {
-  margin-top: 10px;
+  margin-top: 5px;
   font-weight: 900;
   font-size: 1.3rem;
   color: #171717;
@@ -61,11 +53,12 @@ body {
 
 .inputs {
   text-align: left;
-  margin-top: 73px;
+  margin-top: 30px;
 }
-
+.name,
 .email, 
-.pass
+.pass,
+.cpass
 {
   font-weight: 900;
 
@@ -120,14 +113,20 @@ label:nth-of-type(2) {
   
 }
 
+/*.go_back
+{
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}*/
 .sign_up_with
 {
-  width: 220px;
+  width: 260px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 
 .button_Signup,
 .button_Goback
@@ -154,16 +153,19 @@ label:nth-of-type(2) {
   font-weight: 900;
   
   cursor: pointer;
-
   
 }
 
-/*.button_Goback
+.button_Goback
 {
   margin-top: 0px;
   margin-bottom: 40px;
   margin-left: 0px;
   margin-right: 0px;
+}
+/*.button_Signup
+{
+  margin-bottom: 40px;
 }*/
 
 .button_Signup,
@@ -173,10 +175,10 @@ label:nth-of-type(2) {
   transition: background 0.8s ease;
 }
 
+
 .button_Signup:hover,
 .button_login:hover,
-.button_Goback:hover,
-.sign_with:hover
+.button_Goback:hover
 {
   background-color: #CCCCFF;
 }
@@ -185,6 +187,7 @@ a
 {
   text-decoration: none
 }
+
 
 
 .sign_with
@@ -235,6 +238,19 @@ a
   background-image: url(../img/twitter.png);
 }
 
+
+
+/*.sign_up_with div
+{
+  display: flex;
+}
+
+.button_Signup_container
+{
+  display: flex;
+  justify-self: center;
+}*/
+
 .button_Signup_with
 {
   display: block;
@@ -262,18 +278,12 @@ a
 
   display: flex;
   align-items: center;
-
   transition: background 0.8s ease;
 }
 
 
 .button_Signup_with:hover
 {
-
+  
   background-color: #CCCCFF;
-
-}
-
-.alert alert-danger{
-    margin-top: 100px;
 }

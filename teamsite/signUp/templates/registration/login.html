@@ -5,52 +5,55 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="{% static 'signUp/css/style_signup.css' %}">
+	<link rel="stylesheet" href="{% static 'signUp/css/style.css' %}">
 </head>
 <body>
 	<div class="container">
-		{% if form.errors %}
-			{{ form.error}}
-		{% endif %}
+		<h1>{{ error }}</h1>
 		<div class="inner_container">
 
-			
+			<div class="welkome">WELCOME</div>
 			<div class="details">Please enter your details</div>
+
 			<form method="post" action="">
 				{% csrf_token %}
 			<div class="inputs">
 
-				<label class="name">Name</label>
-				{{ form.username }}
+				<label class="email">EMAIL</label>
+				<input class="input-btn" name="email" type="email" placeholder="example@test.com">
 
-				<label class="email" style="margin-top: 12px;">Email</label>
-				{{ form.email }}
+				<label class="pass">PASSWORD</label>
+				<input class="input-btn" name="password" type="password" placeholder="Min 8 charaters long">
 
-				<label class="pass" style="margin-top: 12px;">Password</label>
-				{{ form.password1 }}
+	            <input type="submit" value="LOGIN" class="button_login">
 
-				<label class="cpass" style="margin-top: 12px; color: ;">Confirm password</label>
-	            {{ form.password2 }}
-
-				<input class="button_Signup" type="submit" value="SignUp">
 	        </div>
 			</form>
-
-
-
+	        <div>
+				<a href="{% url 'signUp' %}">
+					<button type="submit" class="button_Signup">
+						Dont have an account? Sign up?
+					</button>
+				</a>
+			</div>
 	        
 
 		</div>
+
+
+
+
+
 		<div class="sign_up_with">
 
 
 			<div class="sign_up_with_1">
 
-				<a href="#">
+				<a href="signup.html">
 					<button type="submit" class="button_Signup_with">
 						<div class="icon icon1"></div>
 
-						<div class="text">SignUP with Facebook</div>
+						<div class="text">LogIn with Facebook</div>
 					</button>
 				</a>
 
@@ -59,11 +62,11 @@
 
 
 			<div class="sign_up_with_2">
-				<a href="#">
+				<a href="signup.html">
 					<button type="submit" class="button_Signup_with">
 						<div class="icon icon2"></div>
 
-						<div class="text">SignUP with Google</div>
+						<div class="text">LogIn with Google</div>
 					</button>
 				</a>
 			</div>
@@ -72,17 +75,18 @@
 
 
 			<div class="sign_up_with_3">
-				<a href="#">
+				<a href="signup.html">
 					<button type="submit" class="button_Signup_with">
 						<div class="icon icon3"></div>
 
-						<div class="text">SignUP with Twitter</div>
+						<div class="text">LogIn with Twitter</div>
 					</button>
 				</a>
 			</div>
 
 			
 		</div>
+
 
 	</div>	
 </body>
