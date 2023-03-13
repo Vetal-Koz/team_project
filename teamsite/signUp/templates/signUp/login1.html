@@ -83,7 +83,7 @@
 
 			<div class="sign_up_with_1">
 
-				<a href="signup.html">
+				<a href="{% url 'social' %}">
 					<button type="submit" class="button_Signup_with">
 						<div class="icon icon1"></div>
 
@@ -96,11 +96,14 @@
 
 
 			<div class="sign_up_with_2">
-				<a href="signup.html">
-					<button type="submit" class="button_Signup_with">
-						<div class="icon icon2"></div>
+				<a href="{% url 'social' %}">
 
-						<div class="text">LogIn with Google</div>
+					<button type="submit" class="button_Signup_with">
+						<a href="{% url 'social:begin' 'google-oauth2' %}">
+							<div class="icon icon2"></div>
+							<div class="text">LogIn with Google</div>
+						</a>
+
 					</button>
 				</a>
 			</div>
@@ -109,7 +112,7 @@
 
 
 			<div class="sign_up_with_3">
-				<a href="signup.html">
+				<a href="{% url 'social' %}">
 					<button type="submit" class="button_Signup_with">
 						<div class="icon icon3"></div>
 
