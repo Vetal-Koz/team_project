@@ -37,7 +37,7 @@ def login(request):
             return redirect('home')
         else:
             error = 'Invalid email or password'
-            messages.error(request, 'Invalid email or password')
+            messages.error(request, 'Please enter a correct email and password.')
 
     data = {
         'error': error,
