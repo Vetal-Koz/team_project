@@ -5,6 +5,10 @@ from django.contrib.auth import authenticate
 from django.contrib.auth import login as logIn
 from django.http import HttpResponse
 from .forms import SignUpForm
+from django.contrib.auth.decorators import login_required
+# Create your views here.
+
+
 
 
 def signup(request):
@@ -43,3 +47,5 @@ def login(request):
         'error': error,
     }
     return render(request, 'signUp/login1.html', data)
+
+
