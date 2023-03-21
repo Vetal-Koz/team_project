@@ -147,8 +147,5 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
- STATICFILES_DIRS = (os.path.join(BASE_DIR, ''),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, ''),)
 
-
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '627349726980-ldn38bm9q4erlcrg20d9drvsb8acc9o3.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
