@@ -6,7 +6,6 @@ from django.contrib.auth import login as logIn
 from django.http import HttpResponse
 from .forms import SignUpForm
 from django.contrib.auth.decorators import login_required
-# Create your views here.
 
 
 
@@ -46,6 +45,6 @@ def login(request):
     data = {
         'error': error,
     }
-    return render(request, 'signUp/login1.html', data)
+    return render(request, 'signUp/login_page.html', data)
 
 

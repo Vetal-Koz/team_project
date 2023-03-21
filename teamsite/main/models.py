@@ -2,14 +2,14 @@ from django.db import models
 
 
 class Courses(models.Model):
-    name = models.CharField(max_length=120, blank=False)
+    title = models.CharField(max_length=120, blank=False)
     description = models.CharField(max_length=200, blank=False)
     full_text = models.TextField()
     course_image = models.ImageField(null=True, blank=True, upload_to='images/')
-    created_data = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.name
+        return self.title
 
     class Meta:
         verbose_name = 'Course'
@@ -25,5 +25,5 @@ class Themes(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = 'Theme'
-        verbose_name_plural = 'Themes'
+        verbose_name = 'Topic'
+        verbose_name_plural = 'Topics'
